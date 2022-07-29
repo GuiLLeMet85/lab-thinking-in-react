@@ -1,5 +1,19 @@
+p {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+
+
+
+
 .App {
   text-align: center;
+  width: 80vw;
+  padding: 4vh 2vw;
 }
 
 .App-logo {
@@ -35,4 +49,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+table {
+    margin: 2vh auto;
+}
+
+th, td {
+    width: 20vw;
+}
+
+th {
+    height: 5vh;
+    background-color: cornflowerblue;
+    color: white;
+    border: 3px #333 solid;
+}
+
+td {
+    border: 1px #999 solid;
 }

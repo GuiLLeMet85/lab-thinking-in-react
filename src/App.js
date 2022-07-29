@@ -1,17 +1,16 @@
-import "./App.css";
-import ProductPage from '../components/ProductsPage'
-import SearchBar from '/../components/SearchBar'
-import ProductTable from "../components/ProductTable";
-
+import './App.css';
+import React from 'react';
+import ProductsPage from "./components/ProductsPage";
 
 function App() {
-  return 
-      <div className="App">
-        <ProductPage />
-        <SearchBar />
-        <ProductTable />
-      </div>;
-}
+  return (
+    <div className="App">
+      
 
+      <ProductsPage />
+
+    </div>
+  );
+}
 
 export default App;
