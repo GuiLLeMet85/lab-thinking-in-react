@@ -11,16 +11,15 @@ export default function ProductsPage() {
         return (
             <>
           <h1>IronStore</h1>
-          <table>
-          <tr>
-                <th>Name</th>
-                <th>Price</th>    
-            </tr>
-           <ProductTable products={products} />
-          </table>
-         
-         
-          </>
+                <SearchBar />
+            <table>
+                <tr>
+                        <th>Name</th>
+                        <th>Price</th>    
+                </tr>
+                 <ProductTable products={products} />
+            </table>
+            </>
         )
 
 }
