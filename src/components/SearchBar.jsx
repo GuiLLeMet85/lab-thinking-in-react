@@ -1,6 +1,8 @@
 import React from "react";
 
 export default function SearchBar(props) {
+
+    
     const { onSearch } = props;
     return (
         <div>

@@ -7,11 +7,19 @@ export default function ProductsPage() {
 
     const [products, setProducts] = useState(jsonData);
 
-  
+    const handleSearch = (searchValue) => {
+        if (searchValue === '') {
+            setProducts(jsonData);
+        }   else {
+        const filtered = products.filter(elem =>elem.name.toLowerCase().includes((searchValue).toLowerCase()));
+            setProducts(filtered);
+        }
+    }   
         return (
             <>
           <h1>IronStore</h1>
-                <SearchBar />
+                 <p className="search-title">Search</p>   
+                <SearchBar onSearch={handleSearch}/>
             <table>
                 <tr>
                         <th>Name</th>
