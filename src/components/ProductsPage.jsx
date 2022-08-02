@@ -14,7 +14,18 @@ export default function ProductsPage() {
         const filtered = products.filter(elem =>elem.name.toLowerCase().includes((searchValue).toLowerCase()));
             setProducts(filtered);
         }
-    }   
+    } 
+    
+    const handelInStock = (e) => {
+        let isInStock = e.target.value;
+        if (isInStock) {
+            const filterByInStock = products.filter(elem=>elem.inStock);
+            setProducts(filterByInStock);
+        }
+        else {
+            setProducts(jsonData)
+        }
+    }
         return (
             <>
           <h1>IronStore</h1>
