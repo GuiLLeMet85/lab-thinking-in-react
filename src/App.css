@@ -49,7 +49,7 @@ h1 {
 }
 
 table {
-    margin: 2vh auto;
+    margin: 1vh auto;
 }
 
 th, td {
@@ -72,4 +72,14 @@ input[type="text"] {
     padding: 2vh 2vw;
     margin: 1vh auto 2vh;
     border: 3px #333 solid;
+}
+
+input[type="checkbox"] {
+  margin-right: 1vw;
+}
+
+.checksearch {
+  display: flex;
+  justify-content: center;
+  padding: 0 1vw;
 }

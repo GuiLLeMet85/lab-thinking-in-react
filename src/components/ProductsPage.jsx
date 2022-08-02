@@ -15,22 +15,25 @@ export default function ProductsPage() {
             setProducts(filtered);
         }
     } 
-    
-    const handelInStock = (e) => {
-        let isInStock = e.target.value;
-        if (isInStock) {
-            const filterByInStock = products.filter(elem=>elem.inStock);
-            setProducts(filterByInStock);
+            
+    const handleStock = (e) => {
+        if (e.target.checked === true) {
+        const filtered = products.filter(elem => elem.inStock);
+        setProducts(filtered);
+        } else {
+            setProducts(jsonData);
         }
-        else {
-            setProducts(jsonData)
-        }
+
     }
         return (
             <>
           <h1>IronStore</h1>
-                 <p className="search-title">Search</p>   
+                <p className="search-title">Search</p>   
                 <SearchBar onSearch={handleSearch}/>
+                <div className="checksearch">
+                <input type="checkbox" onChange={handleStock} /> <p>Only show products in stock</p> 
+                </div>
+
             <table>
                 <tr>
                         <th>Name</th>
